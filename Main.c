@@ -88,7 +88,7 @@
             }
             if (choice == 11)
             {
-                for (int i = 0; i < StrList_size(list); i++)
+                for (int i = StrList_size(list)-1; i >=0 ; i--)
                 {
                     StrList_removeAt(list, i);
                 }

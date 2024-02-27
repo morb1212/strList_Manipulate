@@ -124,7 +124,7 @@ void StrList_print(const StrList* StrList)
         Node* temp = StrList->_head;
         for (int i = 0; i < StrList->_size; i++)
         {
-            printf("%s", temp->_data+" ");
+            printf("%s ", temp->_data);
             temp = temp->_next;
         }
     }
@@ -208,22 +208,26 @@ void StrList_remove(StrList* StrList, const char* data)
 
 void StrList_removeAt(StrList* StrList, int index)
 {
+    
     if (index == 0)
     {
-        Node* temp = StrList->_head->_next;
-        StrList->_head = temp;
+        Node* temp = StrList->_head;
+        StrList->_head = temp->_next;
+        free(temp);
+        (StrList->_size)--;
     }
     else
     {
         Node* temp = StrList->_head;
-        Node* prev = StrList->_head;
+        Node* prev = NULL;
+
         for (int i = 0; i < index; i++)
         {
             prev = temp;
             temp = temp->_next;
         }
-        prev->_next = temp->_next;
 
+        prev->_next = temp->_next;
         free(temp);
         (StrList->_size)--;
     }
