@@ -122,11 +122,13 @@ void StrList_print(const StrList* StrList)
     if (StrList->_head != NULL)
     {
         Node* temp = StrList->_head;
-        for (int i = 0; i < StrList->_size; i++)
+        for (int i = 0; i < StrList->_size-1; i++)
         {
             printf("%s ", temp->_data);
             temp = temp->_next;
         }
+        printf("%s", temp->_data);
+        printf("\n");
     }
     else
     {
@@ -139,11 +141,11 @@ void StrList_printAt(const StrList* Strlist, int index)
     Node* temp = Strlist->_head;
     if (index < Strlist->_size)
     {
-        for (int i = 0; i < index - 1; i++)
+        for (int i = 0; i < index; i++)
         {
             temp = temp->_next;
         }
-        printf("%s", temp->_data);
+        printf("%s\n", temp->_data);
     }
 }
 
