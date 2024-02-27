@@ -7,19 +7,16 @@
     {
         StrList *list = StrList_alloc();
         int choice;
-        printf("choose a number from the menu\n");
         scanf("%d", &choice);
         while (choice != 0)
         {
             if (choice == 1)
             {
                 int num;
-                printf("how many Strings to you want to enter?\n");
                 scanf("%d", &num);
                 for (int i = 0; i < num; i++)
                 {
                     char* st = (char* )malloc(100 * sizeof(char));
-                    printf("enter the String\n");
                     scanf("%s", st);
                     StrList_insertLast(list, st);
                     free(st);
@@ -28,10 +25,8 @@
             if (choice == 2)
             {
                 int index;
-                printf("enter the index\n");
                 scanf("%d", &index);
                 char* st = (char* )malloc(100 * sizeof(char));
-                printf("enter the String\n");
                 scanf("%s", st);
                 StrList_insertAt(list, st, index);
                 free(st);
@@ -48,7 +43,6 @@
             if (choice == 5)
             {
                 int index;
-                printf("enter the index\n");
                 scanf("%d", &index);
                 StrList_printAt(list, index);
             }
@@ -62,15 +56,13 @@
             {
                 int count;
                 char* st = (char* )malloc(100 * sizeof(char));
-                printf("enter the String\n");
                 scanf("%s", st);
                 count = StrList_count(list, st);
-                printf("the string %s appears %d times\n", st, count);
+                printf("%d\n", count);
             }
             if (choice == 8)
             {
                 char* st = (char* )malloc(100 * sizeof(char));
-                printf("enter the String\n");
                 scanf("%s", st);
                 StrList_remove(list, st);
             }
@@ -78,7 +70,6 @@
             if (choice == 9)
             {
                 int index;
-                printf("enter the index\n");
                 scanf("%d", &index);
                 StrList_removeAt(list, index);
             }
@@ -102,14 +93,13 @@
                 int ans = StrList_isSorted(list);
                 if (ans == 1)
                 {
-                    printf("the list is sorted by lexicographic order\n");
+                    printf("true\n");
                 }
                 else
                 {
-                    printf("the list is not sorted by lexicographic order\n");
+                    printf("false\n");
                 }
             }
-        printf("next choice\n");
          scanf("%d", &choice);
         }
         StrList_free(list);
