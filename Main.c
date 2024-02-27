@@ -38,7 +38,7 @@
             if (choice == 4)
             {
                 int sizeList = StrList_size(list);
-                printf("%d", sizeList);
+                printf("%d\n", sizeList);
             }
             if (choice == 5)
             {
@@ -49,7 +49,7 @@
             if (choice == 6)
             {
                 int len = StrList_printLen(list);
-                printf("%d", len);
+                printf("%d\n", len);
             }
 
             if (choice == 7)
