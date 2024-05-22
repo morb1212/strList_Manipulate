@@ -6,4 +6,4 @@ The program provides a menu-driven interface where you can choose different oper
 
 ## How to Compile
 
-To compile the program, ensure you have a C compiler installed on your system, such as gcc.
+gcc -o main.o main.c bash make main
