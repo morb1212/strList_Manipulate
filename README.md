@@ -6,7 +6,11 @@ The program provides a menu-driven interface where you can choose different oper
 
 ## How to Compile
 
-gcc -o main.o main.c bash make main
+bash
+make main
+./main
 
 ## How to test
-gcc -o test.o test.c bash make test
+bash 
+make test
+./test
