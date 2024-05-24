@@ -14,4 +14,4 @@ make main
 bash 
 make test
 ./test
-expected result: test compilted with not error message
+Expected result: not error messages upon test complition
