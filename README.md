@@ -13,4 +13,4 @@ The program provides a menu-driven interface where you can choose different oper
 - Run command: 
 - make test
 - ./test
-- Expected result: not error messages upon test complition
+- Expected result: no error messages upon test complition
