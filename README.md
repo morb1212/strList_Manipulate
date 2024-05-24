@@ -4,7 +4,7 @@ This program allows you to manipulate a linked list of strings in C. You can per
 
 The program provides a menu-driven interface where you can choose different operations to perform on the string linked list.
 
-## How to Compile
+## How to Run
 - Run command:
 - make main
 - ./main
